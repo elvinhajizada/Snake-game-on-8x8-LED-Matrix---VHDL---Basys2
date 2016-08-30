@@ -1,0 +1,6 @@
+vhdl work "SnakePackage.vhd"
+vhdl work "Random.vhd"
+vhdl work "ClockDivider.vhd"
+vhdl work "SSD.vhd"
+vhdl work "Snake.vhd"
+vhdl work "Display.vhd"

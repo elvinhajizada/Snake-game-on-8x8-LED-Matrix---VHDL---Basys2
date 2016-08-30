@@ -1,0 +1,12 @@
+AR ssd behavioral "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" sub00/vhpl11 1450889711
+EN display NULL "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" sub00/vhpl08 1450889714
+AR clockdivider behavioral "D:/Xilinx ISE Projects/Snake_demo_2/ClockDivider.vhd" sub00/vhpl03 1450889707
+PH snakepackage NULL "D:/Xilinx ISE Projects/Snake_demo_2/SnakePackage.vhd" sub00/vhpl00 1450889704
+AR display behavioral "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" sub00/vhpl09 1450889715
+EN ssd NULL "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" sub00/vhpl10 1450889710
+PB snakepackage snakepackage "D:/Xilinx ISE Projects/Snake_demo_2/SnakePackage.vhd" sub00/vhpl01 1450889705
+EN snake NULL "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" sub00/vhpl06 1450889712
+AR random behavioral "D:/Xilinx ISE Projects/Snake_demo_2/Random.vhd" sub00/vhpl05 1450889709
+EN random NULL "D:/Xilinx ISE Projects/Snake_demo_2/Random.vhd" sub00/vhpl04 1450889708
+EN clockdivider NULL "D:/Xilinx ISE Projects/Snake_demo_2/ClockDivider.vhd" sub00/vhpl02 1450889706
+AR snake behavioral "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" sub00/vhpl07 1450889713

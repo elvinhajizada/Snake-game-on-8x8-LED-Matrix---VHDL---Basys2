@@ -1,0 +1,127 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Dec 23 18:58:07 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RightButton" LOCATE = SITE "G12" LEVEL 1;
+PIN RightButton_pin<0> = BEL "RightButton" PINNAME PAD;
+PIN "RightButton_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "LeftButton" LOCATE = SITE "A7" LEVEL 1;
+COMP "ResetButton" LOCATE = SITE "M4" LEVEL 1;
+COMP "SSDanodes<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "SSDanodes<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "SSDanodes<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "SSDanodes<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "CATHODES<0>" LOCATE = SITE "B2" LEVEL 1;
+COMP "CATHODES<1>" LOCATE = SITE "A3" LEVEL 1;
+COMP "CATHODES<2>" LOCATE = SITE "J3" LEVEL 1;
+COMP "CATHODES<3>" LOCATE = SITE "B5" LEVEL 1;
+COMP "CATHODES<4>" LOCATE = SITE "C6" LEVEL 1;
+COMP "CATHODES<5>" LOCATE = SITE "B6" LEVEL 1;
+COMP "CATHODES<6>" LOCATE = SITE "C5" LEVEL 1;
+COMP "CATHODES<7>" LOCATE = SITE "B7" LEVEL 1;
+COMP "Pause" LOCATE = SITE "N3" LEVEL 1;
+COMP "clock" LOCATE = SITE "B8" LEVEL 1;
+COMP "SSDcathodes<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "SSDcathodes<1>" LOCATE = SITE "H12" LEVEL 1;
+COMP "SSDcathodes<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "SSDcathodes<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "SSDcathodes<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "SSDcathodes<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "SSDcathodes<6>" LOCATE = SITE "M12" LEVEL 1;
+COMP "ANODES<0>" LOCATE = SITE "A9" LEVEL 1;
+COMP "ANODES<1>" LOCATE = SITE "B9" LEVEL 1;
+COMP "ANODES<2>" LOCATE = SITE "A10" LEVEL 1;
+COMP "ANODES<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "ANODES<4>" LOCATE = SITE "C12" LEVEL 1;
+COMP "ANODES<5>" LOCATE = SITE "A13" LEVEL 1;
+COMP "ANODES<6>" LOCATE = SITE "C13" LEVEL 1;
+COMP "ANODES<7>" LOCATE = SITE "D12" LEVEL 1;
+COMP "StartButton" LOCATE = SITE "C11" LEVEL 1;
+PIN StartButton_pin<0> = BEL "StartButton" PINNAME PAD;
+PIN "StartButton_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clock = BEL "clockdivider1/prescaler_counter_0" BEL
+        "clockdivider1/prescaler_counter_1" BEL
+        "clockdivider1/prescaler_counter_2" BEL
+        "clockdivider1/prescaler_counter_3" BEL
+        "clockdivider1/prescaler_counter_4" BEL
+        "clockdivider1/prescaler_counter_5" BEL
+        "clockdivider1/prescaler_counter_6" BEL
+        "clockdivider1/prescaler_counter_7" BEL
+        "clockdivider1/prescaler_counter_8" BEL
+        "clockdivider1/prescaler_counter_9" BEL
+        "clockdivider1/prescaler_counter_10" BEL
+        "clockdivider1/prescaler_counter_11" BEL "clockdivider1/mcounter0_0"
+        BEL "clockdivider1/mcounter0_1" BEL "clockdivider1/mcounter0_2" BEL
+        "clockdivider1/mcounter0_3" BEL "clockdivider1/mcounter0_4" BEL
+        "clockdivider1/mcounter0_5" BEL "clockdivider1/mcounter0_6" BEL
+        "clockdivider1/mcounter0_7" BEL "clockdivider1/mcounter0_8" BEL
+        "clockdivider1/mcounter0_9" BEL "clockdivider1/mcounter0_10" BEL
+        "clockdivider1/mcounter2_0" BEL "clockdivider1/mcounter2_1" BEL
+        "clockdivider1/mcounter2_2" BEL "clockdivider1/mcounter2_3" BEL
+        "ShowScore/clockdivider2/mcounter0_10" BEL
+        "ShowScore/clockdivider2/mcounter0_9" BEL
+        "ShowScore/clockdivider2/mcounter0_8" BEL
+        "ShowScore/clockdivider2/mcounter0_7" BEL
+        "ShowScore/clockdivider2/mcounter0_6" BEL
+        "ShowScore/clockdivider2/mcounter0_5" BEL
+        "ShowScore/clockdivider2/mcounter0_4" BEL
+        "ShowScore/clockdivider2/mcounter0_3" BEL
+        "ShowScore/clockdivider2/mcounter0_2" BEL
+        "ShowScore/clockdivider2/mcounter0_1" BEL
+        "ShowScore/clockdivider2/mcounter0_0" BEL
+        "ShowScore/clockdivider2/prescaler_counter_11" BEL
+        "ShowScore/clockdivider2/prescaler_counter_10" BEL
+        "ShowScore/clockdivider2/prescaler_counter_9" BEL
+        "ShowScore/clockdivider2/prescaler_counter_8" BEL
+        "ShowScore/clockdivider2/prescaler_counter_7" BEL
+        "ShowScore/clockdivider2/prescaler_counter_6" BEL
+        "ShowScore/clockdivider2/prescaler_counter_5" BEL
+        "ShowScore/clockdivider2/prescaler_counter_4" BEL
+        "ShowScore/clockdivider2/prescaler_counter_3" BEL
+        "ShowScore/clockdivider2/prescaler_counter_2" BEL
+        "ShowScore/clockdivider2/prescaler_counter_1" BEL
+        "ShowScore/clockdivider2/prescaler_counter_0" BEL
+        "ShowScore/clockdivider2/mcounter2_3" BEL
+        "ShowScore/clockdivider2/mcounter2_2" BEL
+        "ShowScore/clockdivider2/mcounter2_1" BEL
+        "ShowScore/clockdivider2/mcounter2_0" BEL
+        "displaySnake/clockdivider0/mcounter2_3" BEL
+        "displaySnake/clockdivider0/mcounter2_2" BEL
+        "displaySnake/clockdivider0/mcounter2_1" BEL
+        "displaySnake/clockdivider0/mcounter2_0" BEL
+        "displaySnake/clockdivider0/prescaler_counter_11" BEL
+        "displaySnake/clockdivider0/prescaler_counter_10" BEL
+        "displaySnake/clockdivider0/prescaler_counter_9" BEL
+        "displaySnake/clockdivider0/prescaler_counter_8" BEL
+        "displaySnake/clockdivider0/prescaler_counter_7" BEL
+        "displaySnake/clockdivider0/prescaler_counter_6" BEL
+        "displaySnake/clockdivider0/prescaler_counter_5" BEL
+        "displaySnake/clockdivider0/prescaler_counter_4" BEL
+        "displaySnake/clockdivider0/prescaler_counter_3" BEL
+        "displaySnake/clockdivider0/prescaler_counter_2" BEL
+        "displaySnake/clockdivider0/prescaler_counter_1" BEL
+        "displaySnake/clockdivider0/prescaler_counter_0" BEL
+        "displaySnake/generate_random/rand_temp_5" BEL
+        "displaySnake/generate_random/rand_temp_4" BEL
+        "displaySnake/generate_random/rand_temp_3" BEL
+        "displaySnake/generate_random/rand_temp_2" BEL
+        "displaySnake/generate_random/rand_temp_1" BEL
+        "displaySnake/clockdivider0/mcounter0_10" BEL
+        "displaySnake/clockdivider0/mcounter0_9" BEL
+        "displaySnake/clockdivider0/mcounter0_8" BEL
+        "displaySnake/clockdivider0/mcounter0_7" BEL
+        "displaySnake/clockdivider0/mcounter0_6" BEL
+        "displaySnake/clockdivider0/mcounter0_5" BEL
+        "displaySnake/clockdivider0/mcounter0_4" BEL
+        "displaySnake/clockdivider0/mcounter0_3" BEL
+        "displaySnake/clockdivider0/mcounter0_2" BEL
+        "displaySnake/clockdivider0/mcounter0_1" BEL
+        "displaySnake/clockdivider0/mcounter0_0" BEL
+        "displaySnake/clockdivider0/mcounter1_0" BEL
+        "displaySnake/generate_random/rand_temp_0" BEL
+        "clock_BUFGP/BUFG.GCLKMUX" BEL "clock_BUFGP/BUFG";
+TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+SCHEMATIC END;
+

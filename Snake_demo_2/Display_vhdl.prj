@@ -1,0 +1,6 @@
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\SnakePackage.vhd"
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\Random.vhd"
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\ClockDivider.vhd"
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\SSD.vhd"
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\Snake.vhd"
+vhdl work "D:\Xilinx ISE Projects\Snake_demo_2\Display.vhd"

@@ -1,0 +1,755 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Reading design: Display.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Display.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Display"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : Display
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/SnakePackage.vhd" in Library work.
+Architecture snakepackage of Entity snakepackage is up to date.
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/ClockDivider.vhd" in Library work.
+Entity <clockdivider> compiled.
+Entity <clockdivider> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/Random.vhd" in Library work.
+Architecture behavioral of Entity random is up to date.
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" in Library work.
+Architecture behavioral of Entity ssd is up to date.
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" in Library work.
+Architecture behavioral of Entity snake is up to date.
+Compiling vhdl file "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" in Library work.
+Entity <display> compiled.
+Entity <display> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SSD> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Snake> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Random> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Display> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 82: Unconnected output port 'counter1' of component 'ClockDivider'.
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 107: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 122: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 134: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 146: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 158: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 170: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 182: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 194: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 206: Mux is complete : default of case is discarded
+WARNING:Xst:819 - "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd" line 96: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <counter2>, <DISPLAY>
+Entity <Display> analyzed. Unit <Display> generated.
+
+Analyzing Entity <SSD> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" line 50: Unconnected output port 'counter2' of component 'ClockDivider'.
+WARNING:Xst:753 - "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" line 50: Unconnected output port 'counter1' of component 'ClockDivider'.
+INFO:Xst:1561 - "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd" line 64: Mux is complete : default of case is discarded
+Entity <SSD> analyzed. Unit <SSD> generated.
+
+Analyzing Entity <ClockDivider> in library <work> (Architecture <behavioral>).
+Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
+
+Analyzing Entity <Snake> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" line 69: Unconnected output port 'counter0' of component 'ClockDivider'.
+WARNING:Xst:753 - "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" line 69: Unconnected output port 'counter2' of component 'ClockDivider'.
+WARNING:Xst:819 - "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" line 100: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mycounter<0>>
+WARNING:Xst:819 - "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd" line 85: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ResetButton>, <mpause>
+INFO:Xst:2679 - Register <mScore<3>> in unit <Snake> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <mScore<2>> in unit <Snake> has a constant value of 0000 during circuit operation. The register is replaced by logic.
+Entity <Snake> analyzed. Unit <Snake> generated.
+
+Analyzing Entity <Random> in library <work> (Architecture <behavioral>).
+Entity <Random> analyzed. Unit <Random> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ClockDivider>.
+    Related source file is "D:/Xilinx ISE Projects/Snake_demo_2/ClockDivider.vhd".
+WARNING:Xst:653 - Signal <prescaler> is used but never assigned. This sourceless signal will be automatically connected to value 110000110101.
+    Found 11-bit up counter for signal <mcounter0>.
+    Found 3-bit up counter for signal <mcounter1>.
+    Found 4-bit up counter for signal <mcounter2>.
+    Found 12-bit up counter for signal <prescaler_counter>.
+    Summary:
+	inferred   4 Counter(s).
+Unit <ClockDivider> synthesized.
+
+
+Synthesizing Unit <Random>.
+    Related source file is "D:/Xilinx ISE Projects/Snake_demo_2/Random.vhd".
+    Found 6-bit up counter for signal <rand_temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Random> synthesized.
+
+
+Synthesizing Unit <SSD>.
+    Related source file is "D:/Xilinx ISE Projects/Snake_demo_2/SSD.vhd".
+WARNING:Xst:646 - Signal <counter<10:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10x7-bit ROM for signal <r_cathodes$mux0000> created at line 70.
+    Found 10x7-bit ROM for signal <r_cathodes$mux0001> created at line 72.
+    Found 10x7-bit ROM for signal <r_cathodes$mux0002> created at line 74.
+    Found 10x7-bit ROM for signal <r_cathodes$mux0003> created at line 76.
+    Found 1-of-4 decoder for signal <r_anodes>.
+    Summary:
+	inferred   4 ROM(s).
+	inferred   1 Decoder(s).
+Unit <SSD> synthesized.
+
+
+Synthesizing Unit <Snake>.
+    Related source file is "D:/Xilinx ISE Projects/Snake_demo_2/Snake.vhd".
+WARNING:Xst:646 - Signal <mycounter<2:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <start>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <mDir>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 3-bit adder carry out for signal <AppleX$addsub0000> created at line 76.
+    Found 3-bit adder carry out for signal <AppleY$addsub0000> created at line 75.
+    Found 1-bit register for signal <gameisover>.
+    Found 64-bit register for signal <lastSnakeX>.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0000> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0001> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0002> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0003> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0004> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0005> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0006> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0007> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0008> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0009> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0010> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0011> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0012> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0013> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0014> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0015> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0016> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0017> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0018> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0019> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0020> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0021> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0022> created at line 182.
+    Found 4-bit comparator equal for signal <lastSnakeX_4$cmp_eq0023> created at line 182.
+    Found 64-bit register for signal <lastSnakeY>.
+    Found 2-bit register for signal <mDir0>.
+    Found 2-bit adder for signal <mDir0$add0000> created at line 195.
+    Found 2-bit register for signal <mDir1>.
+    Found 2-bit subtractor for signal <mDir1$sub0000> created at line 202.
+    Found 4-bit up counter for signal <mScore<1:0>>.
+    Found 64-bit register for signal <mSNAKEX>.
+    Found 4-bit comparator greater for signal <mSNAKEX_10$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEX_11$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEX_12$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEX_13$cmp_gt0000> created at line 165.
+    Found 64-bit register for signal <mSNAKEY>.
+    Found 4-bit comparator greater for signal <mSNAKEY_1$cmp_gt0000> created at line 165.
+    Found 6-bit comparator equal for signal <mSNAKEY_14$cmp_eq0000> created at line 147.
+    Found 6-bit comparator equal for signal <mSNAKEY_14$cmp_eq0001> created at line 147.
+    Found 4-bit comparator greater for signal <mSNAKEY_14$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_15$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_2$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_3$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_4$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_5$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_6$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_7$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_8$cmp_gt0000> created at line 165.
+    Found 4-bit comparator greater for signal <mSNAKEY_9$cmp_gt0000> created at line 165.
+    Found 6-bit register for signal <random>.
+    Found 6-bit comparator not equal for signal <random$cmp_ne0000> created at line 147.
+    Found 6-bit comparator not equal for signal <random$cmp_ne0001> created at line 147.
+    Found 1-bit register for signal <temp>.
+    Found 4-bit adder carry out for signal <x$addsub0000> created at line 141.
+    Found 4-bit comparator greater for signal <x$cmp_gt0000> created at line 133.
+    Found 4-bit comparator less for signal <x$cmp_lt0000> created at line 140.
+    Found 6-bit 4-to-1 multiplexer for signal <x$mux0005> created at line 118.
+    Found 5-bit subtractor for signal <x$sub0000> created at line 134.
+    Found 4-bit adder carry out for signal <y$addsub0000> created at line 127.
+    Found 4-bit comparator greater for signal <y$cmp_gt0000> created at line 119.
+    Found 4-bit comparator less for signal <y$cmp_lt0000> created at line 126.
+    Found 5-bit subtractor for signal <y$sub0000> created at line 120.
+    Summary:
+	inferred   2 Counter(s).
+	inferred 246 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  47 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <Snake> synthesized.
+
+
+Synthesizing Unit <Display>.
+    Related source file is "D:/Xilinx ISE Projects/Snake_demo_2/Display.vhd".
+WARNING:Xst:646 - Signal <counter2<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter<10:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0016> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0017> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0018> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0019> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0020> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0021> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0022> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0023> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0024> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0025> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0026> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0027> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0028> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0029> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0030> created at line 87.
+    Found 7-bit adder carry out for signal <DISPLAY_18$addsub0031> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0000> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0001> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0002> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0003> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0004> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0005> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0006> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0007> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0008> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0009> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0010> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0011> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0012> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0013> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0014> created at line 87.
+    Found 8-bit subtractor for signal <DISPLAY_18$sub0015> created at line 87.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0001> created at line 114.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0002> created at line 126.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0003> created at line 138.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0004> created at line 150.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0005> created at line 162.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0006> created at line 174.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0007> created at line 186.
+    Found 8-bit 8-to-1 multiplexer for signal <R_ANODES$mux0008> created at line 198.
+    Found 1-of-8 decoder for signal <R_CATHODES>.
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  64 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Display> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 10x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 40
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 3-bit adder carry out                                 : 2
+ 4-bit adder carry out                                 : 2
+ 5-bit subtractor                                      : 2
+ 7-bit adder carry out                                 : 16
+ 8-bit subtractor                                      : 16
+# Counters                                             : 15
+ 11-bit up counter                                     : 3
+ 12-bit up counter                                     : 3
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 5
+ 6-bit up counter                                      : 1
+# Registers                                            : 69
+ 1-bit register                                        : 2
+ 2-bit register                                        : 2
+ 4-bit register                                        : 64
+ 6-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 47
+ 4-bit comparator equal                                : 24
+ 4-bit comparator greater                              : 17
+ 4-bit comparator less                                 : 2
+ 6-bit comparator equal                                : 2
+ 6-bit comparator not equal                            : 2
+# Multiplexers                                         : 9
+ 6-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 8
+# Decoders                                             : 2
+ 1-of-4 decoder                                        : 1
+ 1-of-8 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 10x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 40
+ 2-bit adder                                           : 1
+ 2-bit subtractor                                      : 1
+ 3-bit adder carry out                                 : 2
+ 4-bit adder carry out                                 : 2
+ 5-bit subtractor                                      : 2
+ 7-bit adder carry out                                 : 16
+ 8-bit subtractor                                      : 16
+# Counters                                             : 15
+ 11-bit up counter                                     : 3
+ 12-bit up counter                                     : 3
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 5
+ 6-bit up counter                                      : 1
+# Registers                                            : 268
+ Flip-Flops                                            : 268
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 2-bit latch                                           : 1
+# Comparators                                          : 47
+ 4-bit comparator equal                                : 24
+ 4-bit comparator greater                              : 17
+ 4-bit comparator less                                 : 2
+ 6-bit comparator equal                                : 2
+ 6-bit comparator not equal                            : 2
+# Multiplexers                                         : 9
+ 6-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 8
+# Decoders                                             : 2
+ 1-of-4 decoder                                        : 1
+ 1-of-8 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <clockdivider0/mcounter1_1> of sequential type is unconnected in block <Snake>.
+WARNING:Xst:2677 - Node <clockdivider0/mcounter1_2> of sequential type is unconnected in block <Snake>.
+
+Optimizing unit <Display> ...
+
+Optimizing unit <SSD> ...
+
+Optimizing unit <Snake> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Display, actual ratio is 114.
+Optimizing block <Display> to meet ratio 100 (+ 5) of 960 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <Display>, final ratio is 106.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 364
+ Flip-Flops                                            : 364
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Display.ngr
+Top Level Output File Name         : Display
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 2415
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 63
+#      LUT2                        : 41
+#      LUT3                        : 327
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 1654
+#      LUT4_D                      : 10
+#      LUT4_L                      : 20
+#      MUXCY                       : 63
+#      MUXF5                       : 151
+#      VCC                         : 1
+#      XORCY                       : 69
+# FlipFlops/Latches                : 367
+#      FD                          : 7
+#      FDCE                        : 134
+#      FDE                         : 130
+#      FDPE                        : 9
+#      FDR                         : 39
+#      FDRE                        : 45
+#      LDCP                        : 2
+#      LDP                         : 1
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 5
+#      OBUF                        : 27
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                     1193  out of    960   124% (*) 
+ Number of Slice Flip Flops:            367  out of   1920    19%  
+ Number of 4 input LUTs:               2130  out of   1920   110% (*) 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of     83    39%  
+ Number of GCLKs:                         5  out of     24    20%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+clock                                  | BUFGP                  | 88    |
+displaySnake/clockdivider0/mcounter1_01| BUFG                   | 272   |
+ResetButton                            | IBUF+BUFG              | 3     |
+LeftButton                             | IBUF+BUFG              | 2     |
+RightButton                            | IBUF+BUFG              | 2     |
+---------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+--------------------------+-------+
+Control Signal                                               | Buffer(FF name)          | Load  |
+-------------------------------------------------------------+--------------------------+-------+
+ResetButton                                                  | IBUF                     | 143   |
+StartButton                                                  | IBUF                     | 1     |
+displaySnake/mDir_0__and0000(displaySnake/mDir_0__and00001:O)| NONE(displaySnake/mDir_0)| 1     |
+displaySnake/mDir_0__and0001(displaySnake/mDir_0__and00011:O)| NONE(displaySnake/mDir_0)| 1     |
+displaySnake/mDir_1__and0000(displaySnake/mDir_1__and00001:O)| NONE(displaySnake/mDir_1)| 1     |
+displaySnake/mDir_1__and0001(displaySnake/mDir_1__and00011:O)| NONE(displaySnake/mDir_1)| 1     |
+-------------------------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.150ns (Maximum Frequency: 122.696MHz)
+   Minimum input arrival time before clock: 5.701ns
+   Maximum output required time after clock: 18.589ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.974ns (frequency: 167.399MHz)
+  Total number of paths / destination ports: 2698 / 215
+-------------------------------------------------------------------------
+Delay:               5.974ns (Levels of Logic = 3)
+  Source:            clockdivider1/prescaler_counter_10 (FF)
+  Destination:       clockdivider1/mcounter2_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: clockdivider1/prescaler_counter_10 to clockdivider1/mcounter2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  clockdivider1/prescaler_counter_10 (clockdivider1/prescaler_counter_10)
+     LUT4_D:I0->O          1   0.612   0.509  clockdivider1/mcounter2_cmp_eq00008 (clockdivider1/mcounter2_cmp_eq00008)
+     LUT3:I0->O           17   0.612   0.923  clockdivider1/mcounter2_cmp_eq000040 (clockdivider1/mcounter2_cmp_eq0000)
+     LUT3:I2->O           15   0.612   0.864  clockdivider1/mcounter0_not00011 (clockdivider1/mcounter0_not0001)
+     FDRE:R                    0.795          clockdivider1/mcounter2_0
+    ----------------------------------------
+    Total                      5.974ns (3.145ns logic, 2.829ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'displaySnake/clockdivider0/mcounter1_01'
+  Clock period: 8.150ns (frequency: 122.696MHz)
+  Total number of paths / destination ports: 39829 / 537
+-------------------------------------------------------------------------
+Delay:               8.150ns (Levels of Logic = 5)
+  Source:            displaySnake/mSNAKEX_0_3 (FF)
+  Destination:       displaySnake/mScore_0_3 (FF)
+  Source Clock:      displaySnake/clockdivider0/mcounter1_01 rising
+  Destination Clock: displaySnake/clockdivider0/mcounter1_01 rising
+
+  Data Path: displaySnake/mSNAKEX_0_3 to displaySnake/mScore_0_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            27   0.514   1.141  displaySnake/mSNAKEX_0_3 (displaySnake/mSNAKEX_0_3)
+     LUT3:I1->O            1   0.612   0.360  displaySnake/Mmux_x_mux00056_SW1 (N587)
+     LUT4:I3->O            2   0.612   0.383  displaySnake/Mmux_x_mux00056 (displaySnake/x_mux0005<1>)
+     LUT4:I3->O            1   0.612   0.360  displaySnake/mSNAKEY_14_cmp_eq0000669 (displaySnake/mSNAKEY_14_cmp_eq0000669)
+     LUT4:I3->O          122   0.612   1.100  displaySnake/mSNAKEY_14_cmp_eq0000671 (displaySnake/mSNAKEY_14_cmp_eq0000)
+     LUT4:I3->O           10   0.612   0.750  displaySnake/mScore_1_and00001 (displaySnake/random_and0000)
+     FDPE:CE                   0.483          displaySnake/random_2
+    ----------------------------------------
+    Total                      8.150ns (4.057ns logic, 4.093ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'displaySnake/clockdivider0/mcounter1_01'
+  Total number of paths / destination ports: 401 / 272
+-------------------------------------------------------------------------
+Offset:              5.701ns (Levels of Logic = 4)
+  Source:            Pause (PAD)
+  Destination:       displaySnake/mScore_0_3 (FF)
+  Destination Clock: displaySnake/clockdivider0/mcounter1_01 rising
+
+  Data Path: Pause to displaySnake/mScore_0_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.607  Pause_IBUF (Pause_IBUF)
+     LUT2:I1->O            1   0.612   0.509  displaySnake/mScore_1_and00001_SW0 (N582)
+     LUT4:I0->O            2   0.612   0.410  displaySnake/mSNAKEY_14_cmp_eq0001696_SW0 (N884)
+     LUT4:I2->O           10   0.612   0.750  displaySnake/mScore_1_and00001 (displaySnake/random_and0000)
+     FDPE:CE                   0.483          displaySnake/random_2
+    ----------------------------------------
+    Total                      5.701ns (3.425ns logic, 2.276ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ResetButton'
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Offset:              2.740ns (Levels of Logic = 2)
+  Source:            LeftButton (PAD)
+  Destination:       displaySnake/mDir_1 (LATCH)
+  Destination Clock: ResetButton falling
+
+  Data Path: LeftButton to displaySnake/mDir_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.106   0.754  LeftButton_IBUF (LeftButton_IBUF1)
+     LUT4:I0->O            1   0.612   0.000  displaySnake/mDir_mux0000<1>1 (displaySnake/mDir_mux0000<1>)
+     LDCP:D                    0.268          displaySnake/mDir_1
+    ----------------------------------------
+    Total                      2.740ns (1.986ns logic, 0.754ns route)
+                                       (72.5% logic, 27.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'displaySnake/clockdivider0/mcounter1_01'
+  Total number of paths / destination ports: 45880 / 15
+-------------------------------------------------------------------------
+Offset:              18.589ns (Levels of Logic = 14)
+  Source:            displaySnake/mSNAKEY_13_0 (FF)
+  Destination:       ANODES<2> (PAD)
+  Source Clock:      displaySnake/clockdivider0/mcounter1_01 rising
+
+  Data Path: displaySnake/mSNAKEY_13_0 to ANODES<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.514   0.902  displaySnake/mSNAKEY_13_0 (displaySnake/mSNAKEY_13_0)
+     LUT2:I0->O            5   0.612   0.690  Madd_DISPLAY_18_addsub0029_lut<3>1 (Madd_DISPLAY_18_addsub0029_lut<3>)
+     LUT4:I0->O            2   0.612   0.383  Msub_DISPLAY_18_sub0013_cy<3>11 (Msub_DISPLAY_18_sub0013_cy<3>)
+     LUT4:I3->O           17   0.612   0.923  Msub_DISPLAY_18_sub0013_cy<4>11 (Msub_DISPLAY_18_sub0013_cy<4>)
+     LUT4:I2->O            4   0.612   0.529  DISPLAY_0_or0000141 (N22)
+     LUT3:I2->O           13   0.612   0.988  DISPLAY_10_or0000451 (N231)
+     LUT4:I0->O            1   0.612   0.387  R_ANODES<2>195 (R_ANODES<2>195)
+     LUT4:I2->O            1   0.612   0.387  R_ANODES<2>210 (R_ANODES<2>210)
+     LUT3:I2->O            1   0.612   0.360  R_ANODES<2>221_SW0 (N696)
+     LUT4:I3->O            1   0.612   0.509  R_ANODES<2>221 (R_ANODES<2>221)
+     LUT4:I0->O            1   0.612   0.509  R_ANODES<2>247 (R_ANODES<2>247)
+     LUT4:I0->O            1   0.612   0.360  R_ANODES<2>269 (R_ANODES<2>269)
+     LUT4:I3->O            1   0.612   0.000  R_ANODES<2>1168_G (N849)
+     MUXF5:I1->O           1   0.278   0.357  R_ANODES<2>1168 (ANODES_2_OBUF)
+     OBUF:I->O                 3.169          ANODES_2_OBUF (ANODES<2>)
+    ----------------------------------------
+    Total                     18.589ns (11.305ns logic, 7.284ns route)
+                                       (60.8% logic, 39.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 301 / 27
+-------------------------------------------------------------------------
+Offset:              9.307ns (Levels of Logic = 6)
+  Source:            clockdivider1/mcounter2_1 (FF)
+  Destination:       ANODES<2> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: clockdivider1/mcounter2_1 to ANODES<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            27   0.514   1.224  clockdivider1/mcounter2_1 (clockdivider1/mcounter2_1)
+     LUT4:I0->O            2   0.612   0.449  R_ANODES<2>244 (R_ANODES<2>1102)
+     LUT4:I1->O            1   0.612   0.509  R_ANODES<2>247 (R_ANODES<2>247)
+     LUT4:I0->O            1   0.612   0.360  R_ANODES<2>269 (R_ANODES<2>269)
+     LUT4:I3->O            1   0.612   0.000  R_ANODES<2>1168_G (N849)
+     MUXF5:I1->O           1   0.278   0.357  R_ANODES<2>1168 (ANODES_2_OBUF)
+     OBUF:I->O                 3.169          ANODES_2_OBUF (ANODES<2>)
+    ----------------------------------------
+    Total                      9.307ns (6.409ns logic, 2.898ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 144.00 secs
+Total CPU time to Xst completion: 143.98 secs
+ 
+--> 
+
+Total memory usage is 298400 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

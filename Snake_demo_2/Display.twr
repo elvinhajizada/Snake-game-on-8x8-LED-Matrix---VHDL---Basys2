@@ -1,0 +1,508 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml Display.twx Display.ncd -o Display.twr Display.pcf -ucf
+MatrixPins.ucf
+
+Design file:              Display.ncd
+Physical constraint file: Display.pcf
+Device,package,speed:     xc3s100e,cp132,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2634 paths analyzed, 308 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.320ns.
+--------------------------------------------------------------------------------
+
+Paths for end point ShowScore/clockdivider2/mcounter0_8 (SLICE_X31Y20.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_14 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.320ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_14 to ShowScore/clockdivider2/mcounter0_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y31.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<14>
+                                                       ShowScore/clockdivider2/prescaler_counter_14
+    SLICE_X30Y24.F3      net (fanout=2)        0.807   ShowScore/clockdivider2/prescaler_counter<14>
+    SLICE_X30Y24.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.F1      net (fanout=1)        0.322   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_8
+    -------------------------------------------------  ---------------------------
+    Total                                      6.320ns (3.288ns logic, 3.032ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_4 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_4 to ShowScore/clockdivider2/mcounter0_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y26.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<4>
+                                                       ShowScore/clockdivider2/prescaler_counter_4
+    SLICE_X30Y26.F2      net (fanout=2)        0.434   ShowScore/clockdivider2/prescaler_counter<4>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.288ns logic, 2.684ns route)
+                                                       (55.1% logic, 44.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_3 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_3 to ShowScore/clockdivider2/mcounter0_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y25.YQ      Tcko                  0.511   ShowScore/clockdivider2/prescaler_counter<2>
+                                                       ShowScore/clockdivider2/prescaler_counter_3
+    SLICE_X30Y26.F1      net (fanout=2)        0.437   ShowScore/clockdivider2/prescaler_counter<3>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_8
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.285ns logic, 2.687ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ShowScore/clockdivider2/mcounter0_9 (SLICE_X31Y20.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_14 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.320ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_14 to ShowScore/clockdivider2/mcounter0_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y31.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<14>
+                                                       ShowScore/clockdivider2/prescaler_counter_14
+    SLICE_X30Y24.F3      net (fanout=2)        0.807   ShowScore/clockdivider2/prescaler_counter<14>
+    SLICE_X30Y24.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.F1      net (fanout=1)        0.322   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_9
+    -------------------------------------------------  ---------------------------
+    Total                                      6.320ns (3.288ns logic, 3.032ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_4 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_4 to ShowScore/clockdivider2/mcounter0_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y26.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<4>
+                                                       ShowScore/clockdivider2/prescaler_counter_4
+    SLICE_X30Y26.F2      net (fanout=2)        0.434   ShowScore/clockdivider2/prescaler_counter<4>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_9
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.288ns logic, 2.684ns route)
+                                                       (55.1% logic, 44.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_3 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_3 to ShowScore/clockdivider2/mcounter0_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y25.YQ      Tcko                  0.511   ShowScore/clockdivider2/prescaler_counter<2>
+                                                       ShowScore/clockdivider2/prescaler_counter_3
+    SLICE_X30Y26.F1      net (fanout=2)        0.437   ShowScore/clockdivider2/prescaler_counter<3>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y20.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y20.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<8>
+                                                       ShowScore/clockdivider2/mcounter0_9
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.285ns logic, 2.687ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ShowScore/clockdivider2/mcounter0_10 (SLICE_X31Y21.SR), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_14 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.320ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_14 to ShowScore/clockdivider2/mcounter0_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y31.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<14>
+                                                       ShowScore/clockdivider2/prescaler_counter_14
+    SLICE_X30Y24.F3      net (fanout=2)        0.807   ShowScore/clockdivider2/prescaler_counter<14>
+    SLICE_X30Y24.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.F1      net (fanout=1)        0.322   ShowScore/clockdivider2/prescaler_counter_cmp_eq00006
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y21.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y21.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<10>
+                                                       ShowScore/clockdivider2/mcounter0_10
+    -------------------------------------------------  ---------------------------
+    Total                                      6.320ns (3.288ns logic, 3.032ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_4 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_4 to ShowScore/clockdivider2/mcounter0_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y26.XQ      Tcko                  0.514   ShowScore/clockdivider2/prescaler_counter<4>
+                                                       ShowScore/clockdivider2/prescaler_counter_4
+    SLICE_X30Y26.F2      net (fanout=2)        0.434   ShowScore/clockdivider2/prescaler_counter<4>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y21.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y21.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<10>
+                                                       ShowScore/clockdivider2/mcounter0_10
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.288ns logic, 2.684ns route)
+                                                       (55.1% logic, 44.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.028ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ShowScore/clockdivider2/prescaler_counter_3 (FF)
+  Destination:          ShowScore/clockdivider2/mcounter0_10 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ShowScore/clockdivider2/prescaler_counter_3 to ShowScore/clockdivider2/mcounter0_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y25.YQ      Tcko                  0.511   ShowScore/clockdivider2/prescaler_counter<2>
+                                                       ShowScore/clockdivider2/prescaler_counter_3
+    SLICE_X30Y26.F1      net (fanout=2)        0.437   ShowScore/clockdivider2/prescaler_counter<3>
+    SLICE_X30Y26.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.F2      net (fanout=1)        0.347   ShowScore/clockdivider2/prescaler_counter_cmp_eq000017
+    SLICE_X30Y29.X       Tilo                  0.660   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+                                                       ShowScore/clockdivider2/prescaler_counter_cmp_eq000063
+    SLICE_X30Y20.F2      net (fanout=15)       0.926   ShowScore/clockdivider2/prescaler_counter_cmp_eq0000
+    SLICE_X30Y20.X       Tilo                  0.660   ShowScore/clockdivider2/mcounter0_and0000
+                                                       ShowScore/clockdivider2/mcounter0_and000043
+    SLICE_X31Y21.SR      net (fanout=6)        0.977   ShowScore/clockdivider2/mcounter0_and0000
+    SLICE_X31Y21.CLK     Tsrck                 0.794   ShowScore/clockdivider2/mcounter0<10>
+                                                       ShowScore/clockdivider2/mcounter0_10
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (3.285ns logic, 2.687ns route)
+                                                       (55.0% logic, 45.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point displaySnake/clockdivider0/mcounter1_0 (SLICE_X6Y42.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.961ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               displaySnake/clockdivider0/mcounter1_0 (FF)
+  Destination:          displaySnake/clockdivider0/mcounter1_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.961ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: displaySnake/clockdivider0/mcounter1_0 to displaySnake/clockdivider0/mcounter1_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y42.YQ       Tcko                  0.454   displaySnake/clockdivider0/mcounter1_01
+                                                       displaySnake/clockdivider0/mcounter1_0
+    SLICE_X6Y42.BY       net (fanout=2)        0.375   displaySnake/clockdivider0/mcounter1_01
+    SLICE_X6Y42.CLK      Tckdi       (-Th)    -0.132   displaySnake/clockdivider0/mcounter1_01
+                                                       displaySnake/clockdivider0/mcounter1_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.961ns (0.586ns logic, 0.375ns route)
+                                                       (61.0% logic, 39.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point displaySnake/generate_random/rand_temp_4 (SLICE_X29Y16.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.149ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               displaySnake/generate_random/rand_temp_4 (FF)
+  Destination:          displaySnake/generate_random/rand_temp_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.149ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: displaySnake/generate_random/rand_temp_4 to displaySnake/generate_random/rand_temp_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y16.XQ      Tcko                  0.411   displaySnake/generate_random/rand_temp<4>
+                                                       displaySnake/generate_random/rand_temp_4
+    SLICE_X29Y16.F4      net (fanout=3)        0.290   displaySnake/generate_random/rand_temp<4>
+    SLICE_X29Y16.CLK     Tckf        (-Th)    -0.448   displaySnake/generate_random/rand_temp<4>
+                                                       displaySnake/Result<4>2
+                                                       displaySnake/generate_random/rand_temp_4
+    -------------------------------------------------  ---------------------------
+    Total                                      1.149ns (0.859ns logic, 0.290ns route)
+                                                       (74.8% logic, 25.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point displaySnake/generate_random/rand_temp_3 (SLICE_X29Y17.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.248ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               displaySnake/generate_random/rand_temp_3 (FF)
+  Destination:          displaySnake/generate_random/rand_temp_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.248ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: displaySnake/generate_random/rand_temp_3 to displaySnake/generate_random/rand_temp_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y17.XQ      Tcko                  0.411   displaySnake/generate_random/rand_temp<3>
+                                                       displaySnake/generate_random/rand_temp_3
+    SLICE_X29Y17.F1      net (fanout=3)        0.389   displaySnake/generate_random/rand_temp<3>
+    SLICE_X29Y17.CLK     Tckf        (-Th)    -0.448   displaySnake/generate_random/rand_temp<3>
+                                                       displaySnake/generate_random/Mcount_rand_temp_xor<3>11
+                                                       displaySnake/generate_random/rand_temp_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.248ns (0.859ns logic, 0.389ns route)
+                                                       (68.8% logic, 31.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.719ns (Tcl)
+  Physical resource: displaySnake/clockdivider0/mcounter1_01/CLK
+  Logical resource: displaySnake/clockdivider0/mcounter1_0/CK
+  Location pin: SLICE_X6Y42.CLK
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.562ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.719ns (Tch)
+  Physical resource: displaySnake/clockdivider0/mcounter1_01/CLK
+  Logical resource: displaySnake/clockdivider0/mcounter1_0/CK
+  Location pin: SLICE_X6Y42.CLK
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.562ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.719ns (Tcl)
+  Physical resource: displaySnake/generate_random/rand_temp<0>/CLK
+  Logical resource: displaySnake/generate_random/rand_temp_0/CK
+  Location pin: SLICE_X30Y17.CLK
+  Clock network: clock_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    6.320|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2634 paths, 0 nets, and 348 connections
+
+Design statistics:
+   Minimum period:   6.320ns{1}   (Maximum frequency: 158.228MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Dec 18 10:23:31 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 170 MB
+
+
+

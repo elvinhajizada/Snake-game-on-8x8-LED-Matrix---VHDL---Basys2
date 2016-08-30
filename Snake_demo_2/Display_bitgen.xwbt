@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Xilinx ISE Projects\Snake_demo_1\Display.ncd
+OUTFILE=D:\Xilinx ISE Projects\Snake_demo_1\Display.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=D:\Xilinx ISE Projects\Snake_demo_1
+LICENSE=WebPack
+USER_INFO=211100970_0_0_011
